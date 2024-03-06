@@ -1,5 +1,5 @@
 import { Component } from "react";
-import withRouter from "../../withRouter";
+import withRouter from "../../../withRouter";
 
 class VanDetail extends Component {
     state = {
