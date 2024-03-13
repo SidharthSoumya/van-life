@@ -1,5 +1,6 @@
 import { Component } from "react";
-import { Link, NavLink } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom";
+import imageUrl from "/public/avatar-icon.png"
 
 export default class Header extends Component {
     render() {
@@ -22,6 +23,9 @@ export default class Header extends Component {
                         className={({ isActive }) => isActive ? 'active-link' : ""}>
                         Vans
                     </NavLink>
+                    <Link to="login" className="login-link">
+                        <img src={imageUrl} className="login-icon" alt="Login icon" />
+                    </Link>
                 </nav>
             </header>
         )
