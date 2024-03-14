@@ -13,7 +13,7 @@ export async function action({ request }) {
     try{
         const data = await loginUser({ email, password })
         localStorage.setItem("loggedin", JSON.stringify(true))
-        const redirectUrl = new URL(request.url).searchParams.get("redirectTo") || "/host"
+        const redirectUrl = new URL(request.url).searchParams("redirectTo") || "/host"
         return redirect(redirectUrl) 
     } catch(error) {
         return error.message

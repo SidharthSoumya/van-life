@@ -8,3 +8,9 @@ export async function requireAuth(request) {
         throw redirect(`/login?message=You must login first&redirectTo=${pathName}`)
     }
 }
+
+export var isLoggedIn = false;
+
+export function setLoginStatus() {
+    isLoggedIn = JSON.parse(localStorage.getItem("loggedin"))
+}
