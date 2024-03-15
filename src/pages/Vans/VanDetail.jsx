@@ -6,10 +6,10 @@ import {
     Await
 } from "react-router-dom";
 import { Suspense } from "react";
-import { getVans } from "../../api";
+import { getVan } from "../../api";
 
 export function loader({ params }) {
-    return defer({ vanDetails: getVans(params.id) });
+    return defer({ vanDetails: getVan(params.id) });
 }
 
 export default function VanDetail() {
